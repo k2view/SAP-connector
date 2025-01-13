@@ -36,28 +36,22 @@ The connector uses APIs specifically built for the K2view connector, which must 
 
 ## SAP Broadway Actors
 
-The library includes five built-in Actors:
+The library includes the below built-in Actors:
 
--   **SapTableExtract**  
-    Extracts data from an SAP table.
+-   **SapTableExtract** - Extracts data from an SAP table.
     -   **Filter Input**: Acts like a WHERE clause in SQL, allowing you to filter the table's records.
     -   **Limit Input**: Restricts the number of extracted records.
--   **SapTableLoad**  
-    Loads data into an SAP table.
+-   **SapTableLoad** - Loads data into an SAP table.
     -   **Operation Input**: Determines the operation to perform on the SAP system:
         -   INSERT: Inserts records into the table. If a record with the same primary key already exists, it will be overwritten (equivalent to a delete followed by an insert).
         -   UPSERT: Inserts a new record if it does not exist. If the record already exists, it will be updated.
     -   **Transaction mode:**
         -   SYNC: API calls are executed sequentially.
         -   ASYNC: API calls are executed asynchronously.
--   **SapDelete**  
-    Deletes data from an SAP table based on specified keys.
--   **SapTruncate**
-
-    Clears all data from an SAP table.
-
--   **SapTableQuery**  
-    Used in LU Table population to extract data from a table based on the linking field values in the parent table.
+-   **SapDelete** - Deletes data from an SAP table based on specified keys.
+-   **SapTruncate** - Clears all data from an SAP table.
+-   **SapTableQuery** - Used in LU Table population to extract data from a table based on the linking field values in the parent table.
+-   **SapSequence** - Fetches the next (or initial) sequence given a number range interval and object.
 
 ## SAP LU Tables
 
@@ -69,7 +63,7 @@ To add tables to the LU Schema, use the **DB Explorer**. After running the **Cat
 
 #### 
 
--   **Fabric Version**: 8.1.0 or higher
+-   **Fabric Version**: 8.1.0 or higher for v1, 8.2.0 for v2.
 
 ## Step 1: Install the SAP Connector
 
@@ -120,6 +114,7 @@ Refer to the instructions in the **Sanity Check Document - Post TR Import-v2.pdf
 -   **User**: Username for connecting to the SAP system
 -   **Password**: Password for the SAP system
 -   **SAP Namespace**: SAP namespace
+-   **SAP Client**: Sap client id - default is 800.
 
 #### **Security Parameters:**
 
@@ -258,6 +253,20 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
     1.  When using **SapTableLoad**, choose **INSERT Mode** whenever possible, for better performance.
 
 # Changelog
+## v2.0.0
+- Implement crawler rules logic to support Fabric 8.2 (also drops support for Fabric 8.1).
+
+## v1.0.3
+### Changed
+- Move README to another git repository.
+- Precedence of params / special actor inputs in SapTableLoad. Now the value of a special field input takes precedence over the value in _params_ for the same field. 
+
+### Added
+- Option in interface to specify the sap client.
+- SAP Sequence actor.
+
+## v1.0.2
+- Fixed handling of type INT8.
 
 ## v1.0.1
 ### Fixed
