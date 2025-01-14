@@ -253,6 +253,8 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
     1.  When using **SapTableLoad**, choose **INSERT Mode** whenever possible, for better performance.
 
 # Changelog
+## v2.0.1
+- Remove validation for minimum required fabric version to allow installing older versions.
 ## v2.0.0
 - Implement crawler rules logic to support Fabric 8.2 (also drops support for Fabric 8.1).
 
