@@ -267,6 +267,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 - Option in interface to specify the sap client.
 - SAP Sequence actor.
 
+### Fixed
+- NPE in result.affectedRows() when an error occurs in SAPTableRead actor.
+- Proper handling of additional data types (A, E, G, Y) in SapTableRead.
+
 ## v1.0.2
 - Fixed handling of type INT8.
 
