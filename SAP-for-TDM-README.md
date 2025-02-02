@@ -176,3 +176,12 @@ For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link
 #### Verifying the Sequence Masking Creation:
 
 After running the TDMLUInit.flow, go to the Sequences folder (Navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field.
+
+## Changelog
+
+### v1.0.1
+#### Changed
+- Overwrite `SapTableQuery` actor that comes with `Sap Connector` in order to use `TDMSourceDbQuery` instead of `SourceDbQuery` - needed for proper synthetic data generation in TDM.
+### v1.0.0
+#### Changed
+- Adapted the code and tested it on TDM 9.1.3
