@@ -86,7 +86,7 @@ To add tables to the LU Schema, use the **DB Explorer**. After running the **Cat
 
 ## Step 3: Validate SAP System Installation
 
-Refer to the instructions in the **Sanity Check Document - Post TR Import-v2.pdf** document to ensure a proper installation of the SAP system.
+Refer to the instructions [here](POST-TR-INSTALLATION.md) to ensure a proper installation of the SAP TR files.
 
 ## Step 4: Create and Validate SAP DB Interface
 
