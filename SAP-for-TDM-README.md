@@ -36,8 +36,14 @@ Before starting, ensure the following versions are in place:
 
 ### Step 1: Make sure TDM 9.1.3 is installed
 
-### Step 2: Install SAP for TDM extension
+### Step 2: Install SAP Connector extension
+Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the version is compatible wih your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
+> **Note:**
+> In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you're using. Due to the above, we have decided to remove this auto-install feature in the newer *SAP for TDM* versions.
 
+### Step 3: Install SAP for TDM extension
+> **Note:**
+> It is crucial to install the *SAP Connector* before installing *SAP for TDM* because the latter will overwrite a file from *SAP Connector*.
 1.  Install the SAP for TDM extension from the K2Exchange tab.
 2.  If you get the below conflict warning, then choose 'Overwrite All'
     <img src="media/tdm/image2.png" width="601" height="265" />
@@ -55,7 +61,7 @@ Before starting, ensure the following versions are in place:
     details) and test the connection
     <img src="media/tdm/image4.png" width="600" height="373" />
 
-### Step 3: Build a Catalog for the SAP tables
+### Step 4: Build a Catalog for the SAP tables
 
 > Note: The SAP Connector is built on top of the Catalog, therefore this step is necessary, otherwise you will not be able to see the tables in the Interface Explorer.
 
@@ -68,10 +74,9 @@ Before starting, ensure the following versions are in place:
 3. After the Discovery job has been completed, navigate to the Catalog tab, click on Actions -\> Build Artifacts
 <img src="media/tdm/image7.png" width="532" height="308" />
 
-
 4.  **Note:** The SAP field definitions are strict with their size; if you decide to mask some of the fields, make sure that the generated values do not exceed their size as defined in SAP (you can check the size in the 'Column Size' in the 'catalog_field_info' MTable located under Implementation -\> Shared Objects -\> Interfaces -\> Discovery -\> MTable).
 
-### Step 4: Create and test SAP LU
+### Step 5: Create and test SAP LU
 1. Create a new LU:
     - Navigate to Project -\> Implementation.
     - Right-click on Logical Units / Data Product and select 'New Data Product (Logical Unit)...'.
@@ -85,9 +90,9 @@ Before starting, ensure the following versions are in place:
 
 3.  Test your SAP LU with a sample entity.
 
-### Step 5: Build the complete LU with all the schemas of SAP and connect between the different tables (from all your required categories).
+### Step 6: Build the complete LU with all the schemas of SAP and connect between the different tables (from all your required categories).
 
-### Step 6: Set TDM for your SAP LU
+### Step 7: Set TDM for your SAP LU
 
 1.  Environment settings:
     1.  Create source and target environments: Navigate to Project -\> Implementation -\> Shared Objects -\> Environments. Open Environments.
@@ -104,12 +109,12 @@ Before starting, ensure the following versions are in place:
     'Install Another Version\...'
     <img src="media/tdm/image11.png" width="524" height="156" />
 
-2. Install the corresponding version of SAP for TDM in the same way (verify that indeed the version of SAP for TDM that you are installing corresponds to the upgraded version of TDM that you just have installed).
+2. Install the corresponding version of *SAP for TDM* in the same way. Verify that the version of *SAP for TDM* that you are installing is compatible with the new TDM version.
 
 3. If you get the below conflict warning, then choose 'Overwrite All'
     <img src="media/tdm/image12.png" width="601" height="224" />
 
-4. If you don't have the SAP Connector installed, SAP for TDM will install it as well. If the SAP Connector version is not the correct one, you will need to downgrade the SAP Connector version:
+4. If you need to install another *SAP Connector* version, you will need to downgrade it as below:
     - Navigate to the extension Tab and in the SAP Connector extension select: 'Install Another Version...'
         <img src="media/tdm/2c740864c4726e15bb925a94e7b1cbf1b7b714e3.png" width="600" height="180" />
     - Choose the corresponding one (for example: if you are working with Fabric 8.1 the corresponding version will be 1.0.2)
@@ -179,6 +184,18 @@ After running the TDMLUInit.flow, go to the Sequences folder (Navigate to Implem
 
 ## Changelog
 
+### v1.0.2
+
+### Fixed
+- Count number of rows in Table-Level load.
+- Add missing inner-flow used by table-level load flow. 
+
+#### Added
+- Added Table-Level Delete flow.
+
+#### Changed
+- Moved README.md to a separate git repository.
+  
 ### v1.0.1
 #### Changed
 - Overwrite `SapTableQuery` actor that comes with `Sap Connector` in order to use `TDMSourceDbQuery` instead of `SourceDbQuery` - needed for proper synthetic data generation in TDM.
