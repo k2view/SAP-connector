@@ -5,6 +5,7 @@
 - [How to use](#how-to-use)
     - [TDMLUInit](#tdmluinit)
     - [TDM Table Level](#tdm-table-level)
+    - [Synthetic data](#synthetic-data)
     - [Sequences](#sequences)
         - [How to Use](#how-to-use-1)
         - [Verifying the Sequence Masking Creation](#verifying-the-sequence-masking-creation)
@@ -133,6 +134,7 @@ Running the TDMLUInit with an LU that uses the SAP Connector,
 automatically all the new flows that will be created (Load flows, Delete
 flows and Generator flows) will be built-in with the SAP Connector
 actors. There is no need to do something special.
+> **Note**: If you want to use sequences, create them before running TDMLUInit (see details below).
 
 ### TDM Table Level
 
@@ -145,6 +147,13 @@ MTable -\> TableLevelInterfaces.csv): set the Supress_indicator to false
 and the Truncate_indicator to false as well.
 
 <img src="media/tdm/e2f5baede4c24e5106d0c65b907ba6aa1997449d.png" width="600" height="170" />
+
+### Synthetic data
+
+SAP for TDM supports synthetic data generation (Rule based generation TDM task). 
+In order to get the generator flows, in TDMLUInit set 'CREATE_GENERATE_FLOWS' to true before running it.
+> **Note**: It is very important to set a classification for every field according to the Column Size in catalog_field_info MTable, otherwise the default will be a random string of size 10-15(which can cause size
+> conflicts in SAP). 
 
 
 ### Sequences
@@ -163,20 +172,23 @@ return the next available sequence value in the range. This value will
 serve as the initial value, and TDM will manage the sequences from this
 point forward.
 
+> **Note:** In TDM, only the numeric non-external number range objects are supported. 
+
 #### How to Use
 
-- Step 1: Open the TDMSeqList.actor and configure the following as needed at the table input:
+- Step 1: Create an initial Broadway flow which includes only one state with the SapSequence actor and fill the inputs (see the description of the actor for more details on the inputs).
+- Step 2: Open the TDMSeqList.actor and configure the following as needed at the table input:
     - SEQUENCE_NAME: Specify the name of your sequence.
     - SEQUENCE_REDIS_OR_DB: TDM.
-    - INITIATE_VALUE_OR_FLOW: SAP_Get_Initial_Sequence_Value.
+    - INITIATE_VALUE_OR_FLOW: The initial flow you created in step 1.
 
-- Step 2: Open the TDMSeqSrc2TrgMapping.actor and configure the following as needed at the table input:
+- Step 3: Open the TDMSeqSrc2TrgMapping.actor and configure the following as needed at the table input:
     - Define the fields as needed by your Logical Unit (LU) relations.
     - Under SEQUENCE_NAME, provide the same sequence name as used in TDMSeqList.actor.
 
 For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link below [TDM Implementation Using Generic Flows \| K2View Support](https://support.k2view.com/Academy/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.html#step-2---create-sequences) (Step 2 - Create Sequences)
 
-- Step 3: Run the TDMLUInit.flow to implement the new sequence in TDM.
+- Step 4: Run the TDMLUInit.flow to implement the new sequence in TDM.
 
 #### Verifying the Sequence Masking Creation:
 
