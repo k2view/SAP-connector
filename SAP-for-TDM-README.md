@@ -36,15 +36,15 @@ Before starting, ensure the following versions are in place:
 
 ### Step 1: Make sure TDM 9.1.3 is installed
 
-### Step 2: Install SAP Connector extension
+### Step 2: Install *SAP Connector* extension
 Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
 > **Note:**
-> In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you're using. Due to the above, we have decided to remove this auto-install feature in the newer *SAP for TDM* versions.
+> In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* extension installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you are using. Due to the above, we have decided to remove this auto-install feature in the latest *SAP for TDM* extension versions.
 
-### Step 3: Install SAP for TDM extension
+### Step 3: Install *SAP for TDM* extension
 > **Note:**
 > It is crucial to install the *SAP Connector* before installing *SAP for TDM* because the latter will overwrite a file from *SAP Connector*.
-1.  Install the SAP for TDM extension from the K2Exchange tab.
+1.  Install the *SAP for TDM* extension from the K2Exchange tab.
 2.  If you get the below conflict warning, then choose 'Overwrite All'
     <img src="media/tdm/image2.png" width="601" height="265" />
 3.  Deploy the TDM LU.
