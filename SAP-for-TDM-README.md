@@ -17,9 +17,9 @@
 The SAP Connector for TDM library is designed to enable seamless
 integration between K2view and SAP systems using TDM.
 
-Installing the SAP for TDM library will automatically install the SAP
-Connector library too, which includes five built-in actors that are in
-use in the SAP for TDM library. Make sure to read the SAP Connector
+Installing the *SAP for TDM* library will automatically install the *SAP
+Connector* library too, which includes five built-in actors that are in
+use in the *SAP for TDM* library. Make sure to read the SAP Connector
 README document as well, as it includes essential information regarding
 the actors.
 
@@ -38,7 +38,7 @@ Before starting, ensure the following versions are in place:
 ### Step 1: Make sure TDM 9.1.3 is installed
 
 ### Step 2: Install SAP Connector extension
-Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the version is compatible wih your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
+Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
 > **Note:**
 > In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you're using. Due to the above, we have decided to remove this auto-install feature in the newer *SAP for TDM* versions.
 
