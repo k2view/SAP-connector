@@ -1,4 +1,4 @@
-# SAP Connector for TDM
+# SAP for TDM
 - [Description](#description)
 - [Installation](#installation)
 - [How to upgrade to a new TDM version](#how-to-upgrade-to-a-new-tdm-version)
@@ -14,14 +14,13 @@
 
 # Description
 
-The SAP Connector for TDM library is designed to enable seamless
+The *SAP for TDM* library is designed to enable seamless
 integration between K2view and SAP systems using TDM.
 
 Installing the *SAP for TDM* library will automatically install the *SAP
-Connector* library too, which includes five built-in actors that are in
-use in the *SAP for TDM* library. Make sure to read the SAP Connector
+Connector* library too, which includes five built-in actors that are used in the *SAP for TDM* library. Make sure to read the SAP Connector
 README document as well, as it includes essential information regarding
-the actors.
+these actors.
 
 # Installation
 
