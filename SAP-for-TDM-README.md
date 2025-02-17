@@ -34,14 +34,14 @@ Before starting, ensure the following versions are in place:
     <img src="media/tdm/image1.png" width="370" height="250" />
 
 
-### Step 1: Make sure TDM 9.1.3 is installed
+### Step 1: Ensure TDM 9.1.3 is Installed
 
-### Step 2: Install *SAP Connector* extension
+### Step 2: Install *SAP Connector* Extension
 Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
 > **Note:**
 > In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* extension installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you are using. Due to the above, we have decided to remove this auto-install feature in the latest *SAP for TDM* extension versions.
 
-### Step 3: Install *SAP for TDM* extension
+### Step 3: Install *SAP for TDM* Extension
 > **Note:**
 > It is crucial to install the *SAP Connector* extension before *SAP for TDM* as the latter might overwrite a file from the *SAP Connector* extension.
 1.  Install the *SAP for TDM* extension from the K2Exchange tab.
@@ -62,7 +62,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
     details) and test the connection
     <img src="media/tdm/image4.png" width="600" height="373" />
 
-### Step 4: Build a Catalog for the SAP tables
+### Step 4: Build a Catalog for the SAP Tables
 
 > Note: The SAP Connector is built on top of the Catalog, therefore this step is necessary, otherwise you will not be able to see the tables in the Interface Explorer.
 
@@ -77,7 +77,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 
 4.  **Note:** The SAP field definitions are strict with their size; if you decide to mask some of the fields, make sure that the generated values do not exceed their size as defined in SAP (you can check the size in the 'Column Size' in the 'catalog_field_info' MTable located under Implementation -\> Shared Objects -\> Interfaces -\> Discovery -\> MTable).
 
-### Step 5: Create and test SAP LU
+### Step 5: Create and Test the SAP LU
 1. Create a new LU:
     - Navigate to Project -\> Implementation.
     - Right-click on Logical Units / Data Product and select 'New Data Product (Logical Unit)...'.
