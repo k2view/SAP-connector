@@ -17,8 +17,8 @@
 The *SAP for TDM* library is designed to enable seamless
 integration between K2view and SAP systems, by using TDM.
 
-Installing the *SAP for TDM* library will automatically install the *SAP
-Connector* library too, which includes five built-in actors that are used in the *SAP for TDM* library. Make sure to read the *SAP Connector*
+Installing the *SAP for TDM* library will **also** automatically install the *SAP
+Connector* library, which includes five built-in actors that are used in the *SAP for TDM* library. Make sure to read the *SAP Connector*
 README document as well, as it includes essential information regarding
 these actors.
 
