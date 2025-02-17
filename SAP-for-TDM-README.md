@@ -69,7 +69,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 1. The tables listed in the plugins.discovery file, under the data_platforms section must include the schema name (Category). If the Category is unknown, use \"\*\" as a wildcard to represent the schema, as shown below:
 <img src="media/tdm/image5.png" width="601" height="322" />
 
-2. Run SAP Discovery: Navigate to Project Tree -\> Implementation -\> Shared Objects -\> Interfaces -\> Other. Right-click the SAP interface you intend to run the Catalog on and select 'Run Discovery Job'
+2. Run SAP Discovery: Navigate to Project Tree -\> Implementation -\> Shared Objects -\> Interfaces -\> Other. Right-click the SAP interface that you intend to run the Catalog on, and select 'Run Discovery Job'
 <img src="media/tdm/image6.png" width="601" height="443" />
 
 3. After the Discovery job has been completed, navigate to the Catalog tab, click on Actions -\> Build Artifacts
