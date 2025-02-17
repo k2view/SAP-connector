@@ -45,16 +45,17 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 > **Note:**
 > It is crucial to install the *SAP Connector* extension before *SAP for TDM* as the latter might overwrite a file from the *SAP Connector* extension.
 1.  Install the *SAP for TDM* extension from the K2Exchange tab.
-2.  If you get the below conflict warning, then choose 'Overwrite All'
+2.  If you get the below conflict warning, then choose 'Overwrite All'.
     <img src="media/tdm/image2.png" width="601" height="265" />
 3.  Deploy the TDM LU.
 4.  Create SAP interface and test it:
-    1)  Navigate to the Project Tree -\> Implementation -\> Shared Objects -\>
+    1) Navigate to the Project Tree -\> Implementation -\> Shared Objects -\>
     Interfaces.
     2) Right-click on 'Interfaces' and select 'New Interface'.
-    3) Select the 'SAP' interface type --
+    3) Select the 'SAP' interface type -
     <img src="media/tdm/image3.png" width="600" height="363" />
-    5) Set the corresponding connection details (host, port, user,
+
+    4) Set the corresponding connection details (host, port, user,
     password, etc.).
     6) SAP Namespace - set to the namespace where the SAP code was
     installed (refer to the *SAP Connector* README document for more
