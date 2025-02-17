@@ -64,7 +64,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 
 ### Step 4: Build a Catalog for the SAP Tables
 
-> Note: The SAP Connector is built on top of the Catalog, therefore this step is necessary, otherwise you will not be able to see the tables in the Interface Explorer.
+> Note: The SAP Connector is built on top of the Catalog and therefore this step is necessary, otherwise you will not be able to see the tables in the Interface Explorer.
 
 1. The tables listed in the data_platforms must include the schema name (Category). If the Category is unknown, use \"\*\" as a wildcard to represent the schema.
 <img src="media/tdm/image5.png" width="601" height="322" />
