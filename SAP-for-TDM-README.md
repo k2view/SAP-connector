@@ -52,14 +52,14 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
     1) Navigate to the Project Tree -\> Implementation -\> Shared Objects -\>
     Interfaces.
     2) Right-click on 'Interfaces' and select 'New Interface'.
-    3) Select the 'SAP' interface type -
+    3) Select the 'SAP' interface type:
     <img src="media/tdm/image3.png" width="600" height="363" />
 
     4) Set the corresponding connection details (host, port, user,
     password, etc.).
     5) SAP Namespace - set to the namespace where the SAP code was
     installed (refer to the *SAP Connector* README document for more
-    details) and test the connection
+    details) and test the connection:
     <img src="media/tdm/image4.png" width="600" height="373" />
 
 ### Step 4: Build a Catalog for the SAP Tables
