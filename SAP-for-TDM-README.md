@@ -105,7 +105,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
     <img src="media/tdm/image10.png" width="601" height="337" />
 4.  Test your SAP LU with a sample entity.
 
-# How to upgrade to a new TDM version
+# How to Upgrade to a New TDM Version
 
 1. Navigate to the extensions Tab and in the extension of TDM choose
     'Install Another Version\...'
