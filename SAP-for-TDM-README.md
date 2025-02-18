@@ -112,9 +112,9 @@ Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in th
    
     <img src="media/tdm/image11.png" width="524" height="156" />
 
-3. Install the corresponding version of *SAP for TDM* in the same way. Verify that the version of *SAP for TDM* that you are installing is compatible with the new TDM version.
+3. Install the corresponding version of *SAP for TDM* extension in the same way. Verify that the version of the *SAP for TDM* extension that you are installing is compatible with the new TDM version.
 
-4. If you get the below conflict warning, then choose 'Overwrite All'
+4. If you get a conflict warning, similar the the one shown below, then choose 'Overwrite All'
     <img src="media/tdm/image12.png" width="601" height="224" />
 
 5. If you need to install another *SAP Connector* version, you will need to downgrade it as below:
