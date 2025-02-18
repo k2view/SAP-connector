@@ -122,7 +122,7 @@ Install the *SAP Connector* extension from the K2Exchange tab. Make sure the ver
     - Choose the corresponding one (for example: if you are working with Fabric 8.1 the corresponding version will be 1.0.2)
     - If you get the below warning, select 'Keep Changes':
         <img src="media/tdm/4cf58df3f816eddb65e18e90a34289cbf311910b.png" width="600" height="167" />
-    - And then in the next warning select 'Keep Both':
+    - And then, in the next warning select 'Keep Both':
         <img src="media/tdm/21d4d5bf0de4817f08e7e831ce5ae644c4609862.png" width="600" height="168" />
     - Navigate to Implementation -\> Shared Objects -\> Java -\> src -\> com -\> k2view -\> cdbms -\> usercode -\> common -\> sap. Delete the file 'SapActorTableQuery.java.new'
     - Refresh the page
