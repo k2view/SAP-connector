@@ -117,7 +117,7 @@ Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in th
 4. If you get a conflict warning, similar the the one shown below, then choose 'Overwrite All':
     <img src="media/tdm/image12.png" width="601" height="224" />
 
-5. If you need to install another *SAP Connector* version, you will need to downgrade it as below:
+5. If you need to install another *SAP Connector* extension's version, you will need to downgrade it as below:
     - Navigate to the extension Tab and in the SAP Connector extension select: 'Install Another Version...'
         <img src="media/tdm/2c740864c4726e15bb925a94e7b1cbf1b7b714e3.png" width="600" height="180" />
     - Choose the corresponding one (for example: if you are working with Fabric 8.1 the corresponding version will be 1.0.2)
