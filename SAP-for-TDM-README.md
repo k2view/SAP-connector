@@ -107,8 +107,8 @@ Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in th
 
 # How to Upgrade to a New TDM Version
 
-1. Navigate to the extensions Tab and in the extension of TDM choose
-    'Install Another Version\...'
+1. Navigate once again (via the *extensions* icon) to open EXTENSIONS in the K2Exchange tab, click on the *settings* icon (to the right of Uninstall) and choose
+    'Install Another Version\...':
     <img src="media/tdm/image11.png" width="524" height="156" />
 
 2. Install the corresponding version of *SAP for TDM* in the same way. Verify that the version of *SAP for TDM* that you are installing is compatible with the new TDM version.
