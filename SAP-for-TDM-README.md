@@ -118,10 +118,10 @@ Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in th
     <img src="media/tdm/image12.png" width="601" height="224" />
 
 5. If you need to install another *SAP Connector* extension's version, you will need to downgrade it as below:
-    - Navigate to EXTENSIONS in the K2Exchange tab, click on the *settings* icon (to the right of *Uninstall*) and choose 'Install Another Version...'
+    - Navigate to EXTENSIONS in the K2Exchange tab, locate the installed *SAP Connector* extension, click on the *settings* icon (to the right of *Uninstall*) and choose 'Install Another Version...'
      
         <img src="media/tdm/2c740864c4726e15bb925a94e7b1cbf1b7b714e3.png" width="600" height="180" />
-    - Choose the corresponding one (for example: if you are working with Fabric 8.1 the corresponding version will be 1.0.2)
+    - Choose the corresponding one (e.g., if you work with Fabric 8.1, the corresponding version should be 1.0.2)
     - If you get the below warning, select 'Keep Changes':
         <img src="media/tdm/4cf58df3f816eddb65e18e90a34289cbf311910b.png" width="600" height="167" />
     - And then, in the next warning select 'Keep Both':    
