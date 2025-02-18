@@ -37,7 +37,7 @@ Before starting, ensure the following versions are in place:
 ### Step 1: Ensure TDM 9.1.3 is Installed
 
 ### Step 2: Install *SAP Connector* Extension
-Install the *SAP Connector* extension from the K2Exchange tab. Make sure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
+Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in the K2Exchange tab, from which you should install the *SAP Connector* extension. Ensure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
 > **Note:**
 > In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* extension installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you are using. Due to the above, we have decided to remove this auto-install feature in the latest *SAP for TDM* extension versions.
 
