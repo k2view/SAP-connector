@@ -98,11 +98,12 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 1.  Environment settings:
     1.  Create source and target environments: Navigate to the Project Tree -\> Implementation -\> Shared Objects -\> Environments. Open Environments.
     <img src="media/tdm/image9.png" width="601" height="306" />
+
     2. Set interfaces (POSTGRESQL_ADMIN, TDM, SAP) for those environments, and test all interfaces to validate that they are working properly.
     3. Press 'Deploy Environments'.
-2.  Run TDMLUInit flow: Navigate to the Project Tree -\> Implementation -\> Shared Objects -\> Broadway -\> TDM -\> TDMLUInit. Open the TDMLUInit.flow and run it with the corresponding arguments. As a result, the following flows will be created, using SAP actors: Load flows, Delete flows, Generator flows (the last two flows are created only if specified in the arguments).
+3.  Run TDMLUInit flow: Navigate to the Project Tree -\> Implementation -\> Shared Objects -\> Broadway -\> TDM -\> TDMLUInit. Open the TDMLUInit.flow and run it with the corresponding arguments. As a result, the following flows will be created, using SAP actors: Load flows, Delete flows, Generator flows (the last two flows are created only if specified in the arguments).
     <img src="media/tdm/image10.png" width="601" height="337" />
-3.  Test your SAP LU with a sample entity.
+4.  Test your SAP LU with a sample entity.
 
 # How to upgrade to a new TDM version
 
