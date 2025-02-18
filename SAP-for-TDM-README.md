@@ -84,7 +84,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
     - Name the new Logical Unit and select the default type.
 2. Add SAP tables to the LU Schema:
     - Open the schema of the newly created LU.
-    - Navigate to the INTERFACE EXPLORER tab.
+    - Navigate to the INTERFACE EXPLORER tab by clicking on the database icon (left-most activity bar).
     - Open the SAP interface and locate the SAP tables to be added.
     - Right-click to add tables to the LU Schema.
     <img src="media/tdm/image8.png" width="526" height="371" />
