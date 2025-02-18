@@ -72,7 +72,7 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 2. Run SAP Discovery: Navigate to Project Tree -\> Implementation -\> Shared Objects -\> Interfaces -\> Other. Right-click the SAP interface that you intend to run the Catalog on, and select 'Run Discovery Job':
 <img src="media/tdm/image6.png" width="601" height="443" />
 
-3. After the Discovery job has been completed, navigate to the Catalog tab, click on Actions -\> Build Artifacts
+3. After the Discovery job has been completed, navigate to the Catalog application, click on Actions -\> Build Artifacts
 <img src="media/tdm/image7.png" width="532" height="308" />
 
 4.  **Note:** The SAP field definitions are strict with their size; if you decide to mask some of the fields, make sure that the generated values do not exceed their size as defined in SAP (you can check the size in the 'Column Size' in the 'catalog_field_info' MTable located under Implementation -\> Shared Objects -\> Interfaces -\> Discovery -\> MTable).
