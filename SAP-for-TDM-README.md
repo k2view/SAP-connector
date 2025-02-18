@@ -79,8 +79,8 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
 
 ### Step 5: Create and Test the SAP LU
 1. Create a new LU:
-    - Navigate to Project -\> Implementation.
-    - Right-click on Logical Units / Data Product and select 'New Data Product (Logical Unit)...'.
+    - Navigate to the Project Tree -\> Implementation.
+    - Right-click on Logical Units / Data Products and select 'New Data Product (Logical Unit)...'.
     - Name the new Logical Unit and select the default type.
 2. Add SAP tables to the LU Schema:
     - Open the schema of the newly created LU.
