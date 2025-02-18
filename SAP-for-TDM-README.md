@@ -86,17 +86,17 @@ Install the *SAP Connector* extension from the *K2exchange* tab. Make sure the v
     - Open the schema of the newly created LU.
     - Navigate to the INTERFACE EXPLORER tab by clicking on the database icon (left-most activity bar).
     - Open the SAP interface and locate the SAP tables to be added.
-    - Right-click to add tables to the LU Schema.
+    - Right-click a table(s) and select the ‘Add Tables to Schema’ option, or any one of the three marked options (shown below).
     <img src="media/tdm/image8.png" width="526" height="371" />
 
 3.  Test your SAP LU with a sample entity.
 
-### Step 6: Build the Complete LU with all the schemas of SAP and Connect between the Different Tables (from all your required categories).
+### Step 6: Build the Complete LU with all the SAP Schemas and Connect between the Different Tables (from all your required categories).
 
 ### Step 7: Set TDM for your SAP LU
 
 1.  Environment settings:
-    1.  Create source and target environments: Navigate to the Project Tree -\> Implementation -\> Shared Objects -\> Environments. Open Environments.
+    1.  Create source and target environments: Navigate to the Project Tree -\> Implementation -\> Shared Objects -\> Environments. Open the Environments sub-folder, which would open a new tab.
     <img src="media/tdm/image9.png" width="601" height="306" />
 
     2. Set interfaces (POSTGRESQL_ADMIN, TDM, SAP) for those environments, and test all interfaces to validate that they are working properly.
