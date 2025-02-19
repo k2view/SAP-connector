@@ -144,9 +144,9 @@ actors. No further action is required from your end.
 Inside the *SAP for TDM* extension, there are special flows for SAP in the
 TDM Tables LU and everything should work automatically when doing TDM
 Table level tasks. The only thing you need to set is the SAP interface
-(or the name you chose for the interface) in the TableLevelInterfaces
+(or the name you have chosen for the interface) in the TableLevelInterfaces
 MTable (Navigate to Implementation -\> Logical Units -\> References -\>
-MTable -\> TableLevelInterfaces.csv): set the Supress_indicator to false
+MTable -\> TableLevelInterfaces.csv): Set the Supress_indicator to false
 and the Truncate_indicator to false as well.
 
 <img src="media/tdm/e2f5baede4c24e5106d0c65b907ba6aa1997449d.png" width="600" height="170" />
