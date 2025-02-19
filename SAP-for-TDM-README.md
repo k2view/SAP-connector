@@ -153,8 +153,8 @@ and the Truncate_indicator to false as well.
 
 ### Synthetic data
 
-SAP for TDM supports synthetic data generation (Rule based generation TDM task). 
-In order to get the generator flows, in TDMLUInit set 'CREATE_GENERATE_FLOWS' to true before running it.
+SAP for TDM supports synthetic data generation (Rule-based generation TDM task). 
+In order to get the Generator flows, set the 'CREATE_GENERATE_FLOWS' to true in TDMLUInit before running it.
 > **Note**: It is very important to set a classification for every field according to the Column Size in catalog_field_info MTable, otherwise the default will be a random string of size 10-15(which can cause size
 > conflicts in SAP). 
 
