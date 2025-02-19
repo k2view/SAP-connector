@@ -195,7 +195,7 @@ For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link
 
 #### Verifying the Sequence Masking Creation:
 
-After running the TDMLUInit.flow, go to the Sequences folder (Navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field.
+After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field.
 
 ## Changelog
 
