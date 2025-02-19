@@ -213,7 +213,7 @@ After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implem
   
 ### v1.0.1
 #### Changed
-- Overwrite `SapTableQuery` actor that comes with `Sap Connector` in order to use `TDMSourceDbQuery` instead of `SourceDbQuery` - needed for proper synthetic data generation in TDM.
+- The Overwrite `SapTableQuery` actor that comes with `Sap Connector` in order to use `TDMSourceDbQuery` instead of `SourceDbQuery` - needed for proper synthetic data generation in TDM.
 ### v1.0.0
 #### Changed
 - Adapted the code and tested it on TDM 9.1.3
