@@ -193,7 +193,7 @@ For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link
 
 - Step 4: Run the TDMLUInit.flow to implement the new sequence in TDM.
 
-#### Verifying the Sequence Masking Creation:
+#### Verifying the Sequence Masking Creation
 
 After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field.
 
@@ -209,7 +209,7 @@ After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implem
 - Added Table-Level Delete flow.
 
 #### Changed
-- Moved README.md to a separate git repository.
+- Moved README.md to a separate Git repository.
   
 ### v1.0.1
 #### Changed
