@@ -161,7 +161,7 @@ In order to get the Generator flows, set the 'CREATE_GENERATE_FLOWS' to true in 
 
 ### Sequences
 
-SAP masking sequences ensure consistent and traceable document numbering
+The SAP masking sequences ensure consistent and traceable document numbering
 by leveraging dynamic elements such as dates and incremental values.
 This mechanism simplifies reporting, enhances traceability, and reduces
 errors in complex SAP environments.
@@ -179,15 +179,15 @@ point forward.
 
 #### How to Use
 
-- Step 1: Create an initial Broadway flow which includes only one state with the SapSequence actor and fill the inputs (see the description of the actor for more details on the inputs).
-- Step 2: Open the TDMSeqList.actor and configure the following as needed at the table input:
+- Step 1: Create an initial Broadway flow, which includes only one state with the SapSequence actor and fill the inputs (see the actor's description for more details on the inputs).
+- Step 2: Open the TDMSeqList.actor and configure the following as needed in the table input:
     - SEQUENCE_NAME: Specify the name of your sequence.
     - SEQUENCE_REDIS_OR_DB: TDM.
     - INITIATE_VALUE_OR_FLOW: The initial flow you created in step 1.
 
-- Step 3: Open the TDMSeqSrc2TrgMapping.actor and configure the following as needed at the table input:
+- Step 3: Open the TDMSeqSrc2TrgMapping.actor and configure the following as needed in the table input:
     - Define the fields as needed by your Logical Unit (LU) relations.
-    - Under SEQUENCE_NAME, provide the same sequence name as used in TDMSeqList.actor.
+    - Under SEQUENCE_NAME, provide the same sequence name as used in the TDMSeqList.actor.
 
 For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link below [TDM Implementation Using Generic Flows \| K2View Support](https://support.k2view.com/Academy/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.html#step-2---create-sequences) (Step 2 - Create Sequences)
 
