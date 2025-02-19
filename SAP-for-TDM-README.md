@@ -137,13 +137,13 @@ Running the TDMLUInit flow with an LU that uses the *SAP Connector* extension,
 automatically creates all the new flows (Load flows, Delete
 flows and Generator flows) as built-in within the *SAP Connector*
 actors. No further action is required from your end.
-> **Note**: If you would like to use sequences, create them before running TDMLUInit (see details below).
+> **Note**: If you would like to use sequences, create them before running the TDMLUInit flow (see details below).
 
 ### TDM Table Level
 
 Inside the *SAP for TDM* extension, there are special flows for SAP in the
-TDM Tables LU and everything should work automatically when doing TDM
-Table level tasks. The only thing you need to set is the SAP interface
+TDM Tables LU and everything should work automatically when executing TDM
+Table Level tasks. The only thing you need to set is the SAP interface
 (or the name you have chosen for the interface) in the TableLevelInterfaces
 MTable (Navigate to Implementation -\> Logical Units -\> References -\>
 MTable -\> TableLevelInterfaces.csv): Set the Supress_indicator to false
@@ -153,21 +153,19 @@ and the Truncate_indicator to false as well.
 
 ### Synthetic data
 
-SAP for TDM supports synthetic data generation (Rule-based generation TDM task). 
-In order to get the Generator flows, set the 'CREATE_GENERATE_FLOWS' to true in TDMLUInit before running it.
-> **Note**: It is very important to set a classification for every field according to the Column Size in catalog_field_info MTable, otherwise the default will be a random string of size 10-15 (which could cause size
-> conflicts in SAP). 
+The *SAP for TDM* extension supports synthetic data generation (Rule-based generation TDM task). 
+In order to get the Generator flows, before running the TDMLUInit flow, set its 'CREATE_GENERATE_FLOWS' value to true.
+> **Note**: It is very important to set the Classification for every field according to the Column Size in the catalog_field_info MTable, otherwise the default flow would retrieve a random string of size 10-15 (which could cause size conflicts in SAP). 
 
 
 ### Sequences
 
 The SAP masking sequences ensure consistent and traceable document numbering
 by leveraging dynamic elements such as dates and incremental values.
-This mechanism simplifies reporting, enhances traceability, and reduces
-errors in complex SAP environments.
+This mechanism simplifies reporting, enhances traceability, and reduces the number of errors in complex SAP environments.
 
 A built-in flow, called SAP_Get_Initial_Sequence_Value, is available for
-handling sequences. Open this flow and populate the parameters as
+handling sequences. Open this flow and populate its parameters as
 required.
 
 The SapSequence actor will call the API with the provided parameters and
@@ -179,7 +177,7 @@ point forward.
 
 #### How to Use
 
-- Step 1: Create an initial Broadway flow, which includes only one state with the SapSequence actor and fill the inputs (see the actor's description for more details on the inputs).
+- Step 1: Create an initial Broadway flow, which includes only one stage with the SapSequence actor, and fill in its inputs (see the actor's description for more details on the inputs).
 - Step 2: Open the TDMSeqList.actor and configure the following as needed in the table input:
     - SEQUENCE_NAME: Specify the name of your sequence.
     - SEQUENCE_REDIS_OR_DB: TDM.
@@ -195,21 +193,21 @@ For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link
 
 #### Verifying the Sequence Masking Creation
 
-After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field.
+After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field (under *Task Execution - Detailed Statistics*).
 
 ## Changelog
 
 ### v1.0.2
 
 ### Fixed
-- Count number of rows in Table-Level load.
-- Add missing inner-flow used by table-level load flow. 
+- Number of rows counter in Table Level load - now displays.
+- Added the missing inner-flow used by Table Level load flow. 
 
 #### Added
-- Added Table-Level Delete flow.
+- Added Table Level Delete flow.
 
 #### Changed
-- Moved README.md to a separate Git repository.
+- Moved the README.md to a separate Git repository.
   
 ### v1.0.1
 #### Changed
