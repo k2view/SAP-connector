@@ -133,10 +133,10 @@ Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in th
 
 ### TDMLUInit
 
-Running the TDMLUInit with an LU that uses the SAP Connector,
-automatically all the new flows that will be created (Load flows, Delete
-flows and Generator flows) will be built-in with the SAP Connector
-actors. There is no need to do something special.
+Running the TDMLUInit flow with an LU that uses the *SAP Connector* extension,
+automatically creates all the new flows (Load flows, Delete
+flows and Generator flows) as built-in within the *SAP Connector*
+actors. No further action is required from your end.
 > **Note**: If you would like to use sequences, create them before running TDMLUInit (see details below).
 
 ### TDM Table Level
