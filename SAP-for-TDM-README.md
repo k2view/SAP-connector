@@ -137,11 +137,11 @@ Running the TDMLUInit with an LU that uses the SAP Connector,
 automatically all the new flows that will be created (Load flows, Delete
 flows and Generator flows) will be built-in with the SAP Connector
 actors. There is no need to do something special.
-> **Note**: If you want to use sequences, create them before running TDMLUInit (see details below).
+> **Note**: If you would like to use sequences, create them before running TDMLUInit (see details below).
 
 ### TDM Table Level
 
-Inside the SAP for TDM extension, there are special flows for SAP in the
+Inside the *SAP for TDM* extension, there are special flows for SAP in the
 TDM Tables LU and everything should work automatically when doing TDM
 Table level tasks. The only thing you need to set is the SAP interface
 (or the name you chose for the interface) in the TableLevelInterfaces
