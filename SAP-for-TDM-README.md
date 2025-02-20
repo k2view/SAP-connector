@@ -197,6 +197,9 @@ After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implem
 
 ## Changelog
 
+### v1.0.3
+- Change extension name from "Sap for TDM" to "SAP for TDM".
+
 ### v1.0.2
 
 ### Fixed
