@@ -196,6 +196,8 @@ For further details about TDMSeqList and TDMSeqSrc2TrgMapping, refer to the link
 After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implementation -\> Shared Objects -\> Broadway -\> Sequences). You should see the created sequence. Tasks associated with your LU will now display the new sequence in the TargetID field (under *Task Execution - Detailed Statistics*).
 
 ## Changelog
+### v1.0.4
+- Fix fetching list of table columns in TDM.
 
 ### v1.0.3
 - Change extension name from "Sap for TDM" to "SAP for TDM".
