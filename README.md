@@ -254,6 +254,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v2.0.3
+- Add incrementBy option to SapTableSequence Actor.
+- Add support for INT4 data type.
+
 ## v2.0.2
 - Merge fixes from 1.0.3
 
