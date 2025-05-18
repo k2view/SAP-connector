@@ -254,6 +254,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v2.0.4
+- Fix set-cookie header issue when CSRF is enabled.
+
 ## v2.0.3
 - Add incrementBy option to SapTableSequence Actor.
 - Add support for INT4 data type.
@@ -265,6 +268,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 - Remove validation for minimum required fabric version to allow installing older versions.
 ## v2.0.0
 - Implement crawler rules logic to support Fabric 8.2 (also drops support for Fabric 8.1).
+
+## v1.0.4
+- Fix set-cookie header issue when CSRF is enabled.
 
 ## v1.0.3
 ### Changed
