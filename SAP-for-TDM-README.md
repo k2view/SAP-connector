@@ -197,6 +197,9 @@ After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implem
 
 ## Changelog
 
+### v1.0.6
+- Revert part of TDM Hotfix which messes up TAR tables creation.
+
 ### v1.0.5
 - Support TAR tables creation with useFabric param.
 - TDM Hotfix for TAR tables creation in useFabric mode (fix is planned for TDM 9.4)
