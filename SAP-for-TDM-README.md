@@ -197,6 +197,10 @@ After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implem
 
 ## Changelog
 
+### v1.0.7-tdm9.3
+- Supports TDM 9.3.1.
+- Enhanced support for sequences.
+
 ### v1.0.6
 - Revert part of TDM Hotfix which messes up TAR tables creation.
 
