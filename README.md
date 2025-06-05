@@ -254,6 +254,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v2.0.5
+- Fix issue in single-quotes escaping in actor name during creation of LU table populations (faced only in recent Studio 8.2 versions).
+  
 ## v2.0.4
 - Fix set-cookie header issue when CSRF is enabled.
 
