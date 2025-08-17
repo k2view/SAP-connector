@@ -254,6 +254,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v2.0.6
+- Fix error handling in table load actor, non-transaction mode.
+- Add a public static function `sapSchemasAndTables` for retrieving a mapping of SAP applications to tables.
+
 ## v2.0.5
 - Fix issue in single-quotes escaping in actor name during creation of LU table populations (faced only in recent Studio 8.2 versions).
   
