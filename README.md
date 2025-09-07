@@ -34,6 +34,14 @@ The SAP Connector library is designed to enable seamless integration between K2v
 
 The connector uses APIs specifically built for the K2view connector, which must be installed on the SAP system.
 
+## Compatibility Matrix
+
+| Fabric version | SAP Connector version | TDM support                            |
+|----------------|-----------------------|----------------------------------------|
+| 8.1            | v1                    | Requires `SAP for TDM` extension |
+| 8.2+            | v2                    | Requires `SAP for TDM` extension |
+| 8.2+           | v3                    | Built-in starting from TDM 9.4 |
+
 ## SAP Broadway Actors
 
 The library includes the below built-in Actors:
