@@ -42,6 +42,11 @@ The connector uses APIs specifically built for the K2view connector, which must 
 | 8.2+            | v2                    | Requires `SAP for TDM` extension |
 | 8.2+           | v3                    | Built-in support, starting from TDM 9.4 |
 
+> Notes:
+> - If you're not using TDM, pick any connector version compatible with your Fabric version.  
+> - If you're using a TDM version older than 9.4, you will need to install `SAP for TDM` according to its compatibility matrix.  
+> - If you're using TDM 9.4 or higher, use v3 of the connector without `SAP for TDM`.
+
 ## SAP Broadway Actors
 
 The library includes the below built-in Actors:
