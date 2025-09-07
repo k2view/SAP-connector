@@ -40,7 +40,7 @@ The connector uses APIs specifically built for the K2view connector, which must 
 |----------------|-----------------------|----------------------------------------|
 | 8.1            | v1                    | Requires `SAP for TDM` extension |
 | 8.2+            | v2                    | Requires `SAP for TDM` extension |
-| 8.2+           | v3                    | Built-in starting from TDM 9.4 |
+| 8.2+           | v3                    | Built-in support, starting from TDM 9.4 |
 
 ## SAP Broadway Actors
 
