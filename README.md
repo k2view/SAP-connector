@@ -268,6 +268,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.0.1
+- Add missing function parseTDMFilterToSAPFilter for SAPTableLevelExtract flow.
+
 ## v3.0.0
 - Add TDM templates and table-level flows.
 - Renew CSRF token also on 401.
