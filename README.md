@@ -1,6 +1,7 @@
 # SAP Connector
 
 [Introduction](#description)
+- [Compatibility Matrix](#compatibility-matrix)
 - [SAP Broadway Actors](#sap-broadway-actors)
 - [SAP LU Tables](#sap-lu-tables)
 
