@@ -1,4 +1,5 @@
-# SAP for TDM
+# SAP for TDM (Legacy)
+- [Compatibility Matrix](#compatibility-matrix)
 - [Description](#description)
 - [Installation](#installation)
 - [How to upgrade to a new TDM version](#how-to-upgrade-to-a-new-tdm-version)
@@ -10,17 +11,17 @@
         - [How to Use](#how-to-use-1)
         - [Verifying the Sequence Masking Creation](#verifying-the-sequence-masking-creation)
 
-# 
+# Compatibility Matrix
+
+| TDM version | SAP for TDM version |
+|----------------|-----------------------|
+| 9.1.3          | v1                  |
+| 9.3.1          | v1.0.7-tdm9.3       |
+| 9.4+           | N/A - SAP Connector alone provides built-in TDM support. |
 
 # Description
 
-The *SAP for TDM* library is designed to enable seamless
-integration between K2view and SAP systems, by using TDM.
-
-Installing the *SAP for TDM* library will **also** automatically install the *SAP
-Connector* library, which includes five built-in actors that are used in the *SAP for TDM* library. Make sure to read the *SAP Connector*
-README document as well, as it includes essential information regarding
-these actors.
+The *SAP for TDM* extension is designed to enable seamless integration between K2view TDM and SAP systems.
 
 # Installation
 
@@ -34,10 +35,10 @@ Before starting, ensure the following versions are in place:
     <img src="media/tdm/image1.png" width="370" height="250" />
 
 
-### Step 1: Ensure TDM 9.1.3 is Installed
+### Step 1: Ensure TDM is Installed
 
 ### Step 2: Install *SAP Connector* Extension
-Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in the K2Exchange tab, from which you should install the *SAP Connector* extension. Ensure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2).
+Click on the *extensions* icon (left-most activity bar) to open EXTENSIONS in the K2Exchange tab, from which you should install the *SAP Connector* extension. Ensure the version is compatible with your Fabric version (v1 for Fabric 8.1, v2 for Fabric 8.2). For more details, see the compatibility matrix of `SAP Connector`.
 > **Note:**
 > In *SAP for TDM* v1.0.1 or older, if you don't have the *SAP Connector* extension installed, *SAP for TDM* will install it automatically. However, it will install the latest available version, which may not be compatible with the Fabric version that you are using. Due to the above, we have decided to remove this auto-install feature in the latest *SAP for TDM* extension versions.
 
@@ -232,3 +233,4 @@ After running the TDMLUInit.flow, go to the Sequences folder (navigate to Implem
 ### v1.0.0
 #### Changed
 - Adapted the code and tested it on TDM 9.1.3
+

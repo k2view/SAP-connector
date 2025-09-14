@@ -1,6 +1,7 @@
 # SAP Connector
 
 [Introduction](#description)
+- [Compatibility Matrix](#compatibility-matrix)
 - [SAP Broadway Actors](#sap-broadway-actors)
 - [SAP LU Tables](#sap-lu-tables)
 
@@ -33,6 +34,19 @@
 The SAP Connector library is designed to enable seamless integration between K2view and SAP systems.
 
 The connector uses APIs specifically built for the K2view connector, which must be installed on the SAP system.
+
+## Compatibility Matrix
+
+| Fabric version | SAP Connector version | TDM support                            |
+|----------------|-----------------------|----------------------------------------|
+| 8.1            | v1                    | Requires `SAP for TDM` extension |
+| 8.2+            | v2                    | Requires `SAP for TDM` extension |
+| 8.2+           | v3                    | Built-in support, starting from TDM 9.4 |
+
+> Notes:
+> - If you're not using TDM, pick any connector version compatible with your Fabric version.  
+> - If you're using a TDM version older than 9.4, you will need to install `SAP for TDM` according to its compatibility matrix.  
+> - If you're using TDM 9.4 or higher, use v3 of the connector without `SAP for TDM`.
 
 ## SAP Broadway Actors
 
@@ -253,6 +267,12 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
     1.  When using **SapTableLoad**, choose **INSERT Mode** whenever possible, for better performance.
 
 # Changelog
+
+## v3.0.0
+- Add TDM templates and table-level flows.
+- Renew CSRF token also on 401.
+- Enhanced debug logging.
+- Fix SapIoMetadata compilation issue.
 
 ## v2.0.6
 - Fix error handling in table load actor, non-transaction mode.
