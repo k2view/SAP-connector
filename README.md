@@ -267,6 +267,12 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.0.0
+- Add TDM templates and table-level flows.
+- Renew CSRF token also on 401.
+- Enhanced debug logging.
+- Fix SapIoMetadata compilation issue.
+
 ## v2.0.6
 - Fix error handling in table load actor, non-transaction mode.
 - Add a public static function `sapSchemasAndTables` for retrieving a mapping of SAP applications to tables.
