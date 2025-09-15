@@ -269,7 +269,8 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 # Changelog
 
 ## v3.0.1
-- Add missing function parseTDMFilterToSAPFilter for SAPTableLevelExtract flow.
+- Fix filtering logic in SAPExtractTableLevel flow.
+- Create new SapTableCount actor.
 
 ## v3.0.0
 - Add TDM templates and table-level flows.
