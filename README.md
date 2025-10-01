@@ -260,6 +260,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.0.2
+- Changed the folders structure of TR files.
+
 ## v3.0.1
 - Fix filtering logic in SAPExtractTableLevel flow.
 - Create new SapTableCount actor.
