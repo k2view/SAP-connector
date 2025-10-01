@@ -6,7 +6,6 @@
 - [SAP LU Tables](#sap-lu-tables)
 
 [Installation](#installation)
-- [Requirements](#requirements)
 - [Step 1: Install the SAP Connector](#step-1-install-the-sap-connector)
 - [Step 2: Install SAP TR Files on Your SAP System](#step-2-install-sap-tr-files-on-your-sap-system)
 - [Step 3: Validate SAP System installation](#step-3-validate-sap-system-installation)
@@ -73,12 +72,6 @@ To add tables to the LU Schema, use the **DB Explorer**. After running the **Cat
 
 # Installation
 
-## Requirements
-
-#### 
-
--   **Fabric Version**: 8.1.0 or higher for v1, 8.2.0 for v2.
-
 ## Step 1: Install the SAP Connector
 
 1.  Open your Studio and navigate to the **Extensions** section.
@@ -88,15 +81,14 @@ To add tables to the LU Schema, use the **DB Explorer**. After running the **Cat
 
 ## Step 2: Install SAP TR Files on Your SAP System
 
-1.  In the Studio, navigate to **Project → Project Resources → SAP → TRs**.
-2.  Download the appropriate zip file based on your SAP system and namespace:
-    1.  **ECC-Z**
-    2.  **ECC-ZY**
-    3.  **S4HANA-Z**
-
-        ![](media/78953fd0b10bc3a177339c0aa293c031.png)
-
-3.  Install the file on your SAP system.
+1. In the Studio, navigate to **Project → Project Resources → SAP → TRs**.  
+2. Download the appropriate TR files for your SAP system and namespace:  
+   - **ECC-Z**  
+   - **ECC-ZY**  
+   - **S4HANA-Z**
+3. Install the files in your SAP system.  
+> **Note:** The files are organized in folders by version number.  
+> You only need to download and install the files from one version (use the latest, which has the highest number).  
 
 ## Step 3: Validate SAP System Installation
 
