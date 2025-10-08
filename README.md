@@ -260,6 +260,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.0.3
+- Fix CSRF token-fetch redirect issue.
+
 ## v3.0.2
 - Changed the folders structure of TR files.
 
