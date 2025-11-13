@@ -260,6 +260,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.0.4
+- Remove unnecessary logs in debug mode.
+- Fix ConcurrentModificationException in SapTableQuery when parent rows are larger than size param (100).
+
 ## v3.0.3
 - Fix CSRF token-fetch redirect issue.
 
