@@ -9,7 +9,8 @@
 - [Step 1: Install the SAP Connector](#step-1-install-the-sap-connector)
 - [Step 2: Install SAP TR Files on Your SAP System](#step-2-install-sap-tr-files-on-your-sap-system)
 - [Step 3: Validate SAP System installation](#step-3-validate-sap-system-installation)
-- [Step 4: Create and validate SAP DB Interface](#step-4-create-and-validate-sap-db-interface)
+- [Step 4: Control access to SAP tables](#step-4-control-access-to-sap-tables)
+- [Step 5: Create and validate SAP DB Interface](#step-5-create-and-validate-sap-db-interface)
     - [Create SAP Interface](#create-an-sap-interface)
     - [Mandatory Parameters for Interface Creation](#mandatory-parameters-for-interface-creation)
     - [Validate the Interface](#validate-the-interface)
@@ -94,7 +95,17 @@ To add tables to the LU Schema, use the **DB Explorer**. After running the **Cat
 
 Refer to the instructions [here](POST-TR-INSTALLATION.md) to ensure a proper installation of the SAP TR files.
 
-## Step 4: Create and Validate SAP DB Interface
+## Step 4: Control access to SAP tables
+You may specify to which tables you want to provide access via the APIs; this can be done by the config table `ZK2V_TC_RS_TABS`.
+- If the table has one entry of a '*' (asterisk), it will allow all tables.
+- If the table has a list of tables, it will only allow that list
+- If the table is empty, it will not allow any tables
+> For testing purposes, you can specify '*' as below.
+
+<img width="400" height="593" alt="image-20250811-122700" src="https://github.com/user-attachments/assets/c21174ec-28f7-4ada-b86b-6a7e81752a2f" />
+
+
+## Step 5: Create and Validate SAP DB Interface
 
 ### Create an SAP Interface
 
