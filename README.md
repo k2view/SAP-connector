@@ -98,7 +98,7 @@ Refer to the instructions [here](POST-TR-INSTALLATION.md) to ensure a proper ins
 ## Step 4: Control access to SAP tables
 You may specify to which tables you want to provide access via the APIs; this can be done by the config table `ZK2V_TC_RS_TABS`.
 - If the table has one entry of a '*' (asterisk), it will allow all tables.
-- If the table has a list of tables, it will only allow that list
+- If the table has a list of tables, it will only allow that list.
 - If the table is empty, it will not allow any tables.
 > For testing purposes, you can specify '*' as below.
 
