@@ -18,7 +18,7 @@
  ![](media/post-tr-installation/image-6.png)
  10. Repeat the steps [2 to 9] for all OData Services.
 
- ## Disable CSRF (Recommended)
+ ## CSRF Validation
  Unless specifically needed, it's recommended to disable CSRF token validation in order to avoid extra API calls to fetch/renew the CSRF token.
  1. Open the tcode sicf.
  2. Locate the Service either using Service Name and Execute (F8).
@@ -28,4 +28,5 @@
  ![](media/post-tr-installation/image-8.png)
  5. Make sure the entry [~CHECK_CSRF_TOKEN, 0] is added to the Parameters.
  6. If the entry is not there, add the entry and save the changes.
+
  7. Repeat the steps [2 to 6] for all OData Services
