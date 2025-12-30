@@ -271,6 +271,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.1.0
+- Support query builder, starting from Fabric 8.4
+
 ## v3.0.4
 - Remove unnecessary logs in debug mode.
 - Fix ConcurrentModificationException in SapTableQuery when parent rows are larger than size param (100).
