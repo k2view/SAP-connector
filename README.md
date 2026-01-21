@@ -271,6 +271,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.1.1
+- Add "Certificate" property in SAP interface
+
 ## v3.1.0
 - Support query builder, starting from Fabric 8.4
 
