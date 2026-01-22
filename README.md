@@ -271,6 +271,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.1.3
+- Change interface techType to nosql (needed for TDM in non-db tech types)
+
 ## v3.1.2
 - Handle trailing +/- in special numbers (e.g., currency) during extract
 
