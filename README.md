@@ -271,6 +271,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.1.4
+- Fix query builder
+
 ## v3.1.3
 - Change interface techType to nosql (needed for TDM in non-db tech types)
 
