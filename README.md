@@ -271,6 +271,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.1.5
+- Proper closing of `SapTableQuery` actor.
+- Updated TR files for S4H/ECC to fix UUID column types (RAW X(16, 0)).
+
 ## v3.1.4
 - Fix query builder
 
