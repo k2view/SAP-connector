@@ -271,6 +271,12 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+## v3.1.6
+- Updated TR files for S4H to fix load isue for UUID column types (RAW X(16, 0)).
+- Use thread pool for parallel loads.
+- Fix load issue when first field in params is empty.
+- Add total processed external in `SAPLoadTableLevel`.
+
 ## v3.1.5
 - Proper closing of `SapTableQuery` actor.
 - Updated TR files for S4H to fix UUID column types (RAW X(16, 0)).
