@@ -413,3 +413,11 @@ A check has now been added to correctly handle empty values by returning `null`.
 ### Fixed
 - Enhanced the performance of `SapTableQuery` in case `parentRows` is empty
 - Update the result count in `SapTableQuery` to ensure it reflects accurately in the `_k2_objects_info` table.
+
+## Changelog
+
+### v3.1.7
+- Fix: `batch()` auto-flushes pending rows when target table changes mid-batch instead of throwing
+- Fix: `execute()` auto-flushes pending batch before single-entry execute instead of throwing
+- Fix: `close()` now fully resets batch state (`lastBatchParams`, `batchTable`)
+- Refactor: extracted `flushPendingBatch()` private helper to eliminate flush code duplication
