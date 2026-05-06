@@ -279,6 +279,9 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 - UTCLONG fields are now read as proper timestamps and written back in the correct SAP format.
 - Parse errors during data reading now surface with full context (table, filter, fields) instead of being      
 silently lost.
+- SYNC batch mode: no longer allocates a thread pool or spawns threads when transactionMode=SYNC; modify API calls run on the calling thread directly.
+- Configurable prefetch (SapTableExtract): new boolean input prefetch (default true). Set
+to false to fetch pages synchronously without spawning a background thread.
 
 ## v3.1.6
 - Updated TR files for S4H to fix load isue for UUID column types (RAW X(16, 0)).
