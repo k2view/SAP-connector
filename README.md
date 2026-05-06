@@ -271,6 +271,15 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+### v3.1.7
+- Fix: `batch()` auto-flushes pending rows when target table changes mid-batch instead of throwing.
+- Fix: `execute()` auto-flushes pending batch before single-entry execute instead of throwing.
+- Full DDIC type support: SAP semantic types (NUMC, CLNT, LANG, CURR, QUAN, UTCLONG, etc.) are now correctly   
+  recognized and mapped.
+- UTCLONG fields are now read as proper timestamps and written back in the correct SAP format.
+- Parse errors during data reading now surface with full context (table, filter, fields) instead of being      
+silently lost.
+
 ## v3.1.6
 - Updated TR files for S4H to fix load isue for UUID column types (RAW X(16, 0)).
 - Use thread pool for parallel loads.
@@ -413,11 +422,3 @@ A check has now been added to correctly handle empty values by returning `null`.
 ### Fixed
 - Enhanced the performance of `SapTableQuery` in case `parentRows` is empty
 - Update the result count in `SapTableQuery` to ensure it reflects accurately in the `_k2_objects_info` table.
-
-## Changelog
-
-### v3.1.7
-- Fix: `batch()` auto-flushes pending rows when target table changes mid-batch instead of throwing
-- Fix: `execute()` auto-flushes pending batch before single-entry execute instead of throwing
-- Fix: `close()` now fully resets batch state (`lastBatchParams`, `batchTable`)
-- Refactor: extracted `flushPendingBatch()` private helper to eliminate flush code duplication
