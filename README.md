@@ -271,6 +271,17 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+### v3.1.7
+- Fix: `batch()` auto-flushes pending rows when target table changes mid-batch instead of throwing.
+- Fix: `execute()` auto-flushes pending batch before single-entry execute instead of throwing.
+- Full DDIC type support: SAP semantic types (NUMC, CLNT, LANG, CURR, QUAN, UTCLONG, etc.) are now correctly   
+  recognized and mapped. New TR files for S4 are provided along with the extension to support this fix.
+- Parse errors during data reading now surface with full context (table, filter, fields) instead of being      
+silently lost.
+- SYNC batch mode: no longer allocates a thread pool or spawns threads when transactionMode=SYNC; modify API calls run on the calling thread directly.
+- Configurable prefetch (SapTableExtract): new boolean input prefetch (default true). Set
+to false to fetch pages synchronously without spawning a background thread.
+
 ## v3.1.6
 - Updated TR files for S4H to fix load isue for UUID column types (RAW X(16, 0)).
 - Use thread pool for parallel loads.
