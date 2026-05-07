@@ -275,8 +275,7 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 - Fix: `batch()` auto-flushes pending rows when target table changes mid-batch instead of throwing.
 - Fix: `execute()` auto-flushes pending batch before single-entry execute instead of throwing.
 - Full DDIC type support: SAP semantic types (NUMC, CLNT, LANG, CURR, QUAN, UTCLONG, etc.) are now correctly   
-  recognized and mapped.
-- UTCLONG fields are now read as proper timestamps and written back in the correct SAP format.
+  recognized and mapped. New TR files for S4 are provided along with the extension to support this fix.
 - Parse errors during data reading now surface with full context (table, filter, fields) instead of being      
 silently lost.
 - SYNC batch mode: no longer allocates a thread pool or spawns threads when transactionMode=SYNC; modify API calls run on the calling thread directly.
