@@ -271,6 +271,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+### v3.1.8
+- Added extensive debug logging throughout the connection and batch processing logic to help diagnose issues
+- Redesigned batch state management to support processing multiple tables in parallel (previously could only batch one table at a time)
+
 ### v3.1.7
 - Fix: `batch()` auto-flushes pending rows when target table changes mid-batch instead of throwing.
 - Fix: `execute()` auto-flushes pending batch before single-entry execute instead of throwing.
