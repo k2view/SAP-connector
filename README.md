@@ -271,6 +271,10 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+### v3.1.9
+- Fixed table record count issue in TDM 9.5 table level.
+- Fixed SAP query filter generated from TDM table-level subset task by adding a space before and after a bracket.
+
 ### v3.1.8
 - Added extensive debug logging throughout the connection and batch processing logic to help diagnose issues
 - Redesigned batch state management to support processing multiple tables in parallel (previously could only batch one table at a time)
