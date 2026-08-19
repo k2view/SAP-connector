@@ -4,6 +4,7 @@
 - [Compatibility Matrix](#compatibility-matrix)
 - [SAP Broadway Actors](#sap-broadway-actors)
 - [SAP LU Tables](#sap-lu-tables)
+- [TDM Table-Level Partitioned Extraction](#tdm-table-level-partitioned-extraction)
 
 [Installation](#installation)
 - [Step 1: Install the SAP Connector](#step-1-install-the-sap-connector)
@@ -66,10 +67,15 @@ The library includes the below built-in Actors:
 -   **SapTruncate** - Clears all data from an SAP table.
 -   **SapTableQuery** - Used in LU Table population to extract data from a table based on the linking field values in the parent table.
 -   **SapSequence** - Fetches the next (or initial) sequence given a number range interval and object.
+-   **SapTableCount** - Counts the records of an SAP table.
 
 ## SAP LU Tables
 
 To add tables to the LU Schema, use the **DB Explorer**. After running the **Catalog** on the SAP interface, the DB Explorer will display the available tables.
+
+## TDM Table-Level Partitioned Extraction
+
+Starting from v3.2.0, TDM table-level extraction supports splitting large SAP tables into parallel partitions, as well as in-place masking updates, via a dedicated set of flows (`SapGetPartitionsNumber`, `SapGetDataByPartition`, `SapInPlaceTableLevel`) and MTable configuration. See the [TDM Table-Level Implementation Guide](TDM-TABLE-LEVEL-GUIDE.md) for the full setup walkthrough.
 
 # Installation
 
@@ -270,6 +276,12 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
     1.  When using **SapTableLoad**, choose **INSERT Mode** whenever possible, for better performance.
 
 # Changelog
+
+### v3.2.0
+- Add partitioned TDM table-level extraction: new `SapGetPartitionsNumber` and `SapGetDataByPartition` flows split large SAP tables into parallel partitions. See the [TDM Table-Level Implementation Guide](TDM-TABLE-LEVEL-GUIDE.md).
+- Add `SapInPlaceTableLevel` flow and UPSERT support in `SAPLoadTableLevel` for in-place masking updates (as opposed to full delete + load).
+- Simplify `SAPLoadTableLevel` to batch and stream records directly through `SapTableLoad` instead of the now-removed `SAPLoadTableLevelAsync` helper flow.
+- Fix external interface wiring in `SAPDeleteTableLevel`.
 
 ### v3.1.9
 - Fixed table record count issue in TDM 9.5 table level.
