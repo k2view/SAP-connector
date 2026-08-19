@@ -18,8 +18,6 @@ Before proceeding with configuration, ensure the K2View SAP Connector is install
 
 ## 3. Components
 
-The SAP Connector implementation includes three custom flows and a dedicated Logical Unit (LU). Each component serves a specific role in the extraction and partitioning pipeline.
-
 ### 3.1 Globals
 
 The partition size parameter controls how data is split across parallel extraction jobs. Adjust this value based on SAP system performance and the size of the target tables.
@@ -48,19 +46,9 @@ Fetches data from the SAP source table for a specific partition range. This flow
 - Output: Rows from the target SAP table for the given partition
 - Used as the `partition_records_flow` in `TableLevelDefinitions`
 
-#### preparePartitioningTestingTable
-
-An internal utility flow used for demo and testing purposes. It copies the original SAP table (`BUT000`) to the demo table (`ZBUT000`) and generates sequential IDs for the `PARTNER` partitioning field.
-
-> **Note:** This flow is for internal/demo use only and should not be included in production task configurations.
-
-### 3.3 TDM Logical Unit (LU)
-
-A dedicated TDM Logical Unit named `SAP` is created as part of this implementation. The LU is intentionally created without any custom business logic — all processing is handled by the flows and MTable configurations described in this guide.
-
 ## 4. MTable Configuration
 
-Three MTables must be configured to enable the partitioned extraction pipeline: `TableLevelDefinitions`, `TableLevelPartitionFlow` and `RefList`.
+Two MTables must be configured to enable the partitioned extraction pipeline: `TableLevelDefinitions`, `TableLevelPartitionFlow`.
 
 ### 4.1 TableLevelDefinitions
 
@@ -74,7 +62,7 @@ Set the following fields for each table entry:
 |---|---|
 | `interface_name` | Name of the SAP interface |
 | `schema_name` | Target schema name |
-| `table_name` | SAP table name (e.g., `ZBUT000`) |
+| `table_name` | SAP table name (e.g., `BUT000`) |
 | `record_count_flow` | `SAPTableRecordCount` |
 | `partition_count_source` | `SapGetPartitionsNumber` |
 | `partition_records_flow` | `SapGetDataByPartition` |
@@ -92,42 +80,3 @@ In addition to the core fields, add the following parameter rows. Each row maps 
 | `SapGetPartitionsNumber` | `MAX` | Maximum value of the partition column |
 | `SapGetDataByPartition` | `MAX` | Maximum value of the partition column |
 | `SapGetDataByPartition` | `selectColumns` | Pipe-separated list of columns required for masking, e.g. `CLIENT\|PARTNER\|NAME_FIRST\|NAME_LAST` |
-
-### 4.3 RefList
-
-Add a new entry in the `RefList` MTable for each SAP table being processed. Populate the entry with the same table details used in `TableLevelDefinitions` (interface name, schema name, table name).
-
-As lu name should set `SAP` as defined in LU section [3.3](#33-tdm-logical-unit-lu).
-
-## 5. Load Task Configuration
-
-Create a new Load Task in the K2View TDM to orchestrate the full extract-and-load pipeline. The task is configured in four stages: Extract, Subset, Test Data Store, and Load.
-
-### 5.1 Extract Stage
-
-Configure the extraction source and scope:
-
-1. Create a new task.
-2. Set the task type to Entities & Referential Data.
-3. Set the Business Entity to `SAP`.
-4. Select the appropriate source environment.
-5. Enable the Referential Tables checkbox.
-6. Under Tables, select the SAP table(s) required.
-
-### 5.2 Subset
-
-1. Set the subsetting method to Entity List.
-2. Enter `1` in the Entity IDs field.
-
-### 5.3 Test Data Store
-
-1. Set the Retention Period to Do Not Retain.
-
-### 5.4 Load Stage
-
-1. Set the Business Entity to `SAP`.
-2. Select the same environment used in the Extract stage.
-3. Enable the Load checkbox.
-
----
-*End of Implementation Guide*
