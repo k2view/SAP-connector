@@ -277,6 +277,16 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
 
 # Changelog
 
+### v3.2.1
+- **Requires connector 3.2.1 or later for S/4HANA transport 902728** (read API: packed fields no longer truncated with `*`). Upgrade the connector before installing the transport; 3.2.0 can write shifted data on loads with it.
+- Packed decimals (DEC/CURR/QUAN/DECFLOAT) are extracted exactly as `BigDecimal` instead of `Double`, which lost digits beyond ~15 (e.g. DEC 21,7 timestamps). Whole numbers are still returned as `Long`.
+- Numbers are never sent to SAP in scientific notation (loads, TDM table-level filters, parent-row filters). Packed values are rounded half-up to the field's decimals, and a value that doesn't fit its field fails with a clear error naming the field.
+- Fixed: loading a table after extracting it in the same process could pad rows with the wrong field widths.
+- Fixed: `SapDelete` with `keys` and a full-row `params` map (and `SapTableLoad` with explicit `fields`) failed with "Expected the same amount of fields and values".
+- Discovery: one unparseable value no longer stops sampling of the whole table (the value is left empty and logged once); row-count failures are logged as a short warning.
+- New optional interface setting **Use String for large decimals** (`largeDecimalAsStr`, default off): decimal fields over 15 digits are cataloged and extracted as exact strings. Takes effect on the next discovery; regenerate affected LU tables.
+- Known limitation: full-precision DEC 21,7 values can't be written to SAP yet (rejected with a clear error) until the SAP-side modify API is updated.
+
 ### v3.2.0
 - Add partitioned TDM table-level extraction: new `SapGetPartitionsNumber` and `SapGetDataByPartition` flows split large SAP tables into parallel partitions. See the [TDM Table-Level Implementation Guide](TDM-TABLE-LEVEL-GUIDE.md).
 - Add `SapInPlaceTableLevel` flow and UPSERT support in `SAPLoadTableLevel` for in-place masking updates (as opposed to full delete + load).
