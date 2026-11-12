@@ -156,7 +156,7 @@ You may specify to which tables you want to provide access via the APIs; this ca
 #### **Optional Parameters for Debugging and Data Handling:**
 
 1.  **Debug Logging**:
-    1.  When set to **true**, it logs each SAP API call at the INFO level, including the API path, payload and response.
+    1.  When set to **true**, it logs each SAP API call at the INFO level: host, API path, SAP processing time and response size. Payloads and responses are not logged, as they can contain personal data.
     2.  For more detailed debugging:
         1.  Leave this flag off.
         2.  Configure logback.xml to show DEBUG-level logs from com.k2view.cdbms.usercode.common.sap for more granular information.
@@ -276,6 +276,15 @@ The **SapTableLoad** actor includes performance-enhancing parameters:
     1.  When using **SapTableLoad**, choose **INSERT Mode** whenever possible, for better performance.
 
 # Changelog
+
+### v3.2.2
+- **S/4HANA transport 902730** (fields and modify APIs: packed fields are laid out as digits+2, with room for the sign and decimal point). Upgrade the connector to 3.2.2 before installing the transport. The connector detects the transport automatically and keeps working with earlier transports; no new discovery is needed after upgrading.
+- With transport 902730, full-width packed values (e.g. DEC 21,7) can be written to SAP, and the catalog captures each field's DDIC data element and domain (`ddicDataElement`, `ddicDomain`) on the next discovery.
+- Fixed: a failed final batch was reported as a successful commit. `commit` now fails with the SAP error, so loads that silently lost their last partial batch will now fail.
+- Fixed: a failed single-row load could make later loads in the same session fail; two loads of the same table with fields in a different order could put values into the wrong fields.
+- Fixed: with **Use String for large decimals** on, DEC 14 and 15-digit fields were extracted as strings on transport 902728 although the catalog declares them as numbers.
+- Error messages lead with the actual cause (HTTP status, SAP's own message, a hint for common causes such as credentials, namespace or missing transports) and no longer contain row values or filter values.
+- **Debug Logging** now logs only the host, API path, SAP processing time and response size. Payloads, responses, credentials and cookies are never logged.
 
 ### v3.2.1
 - **Requires connector 3.2.1 or later for S/4HANA transport 902728** (read API: packed fields no longer truncated with `*`). Upgrade the connector before installing the transport; 3.2.0 can write shifted data on loads with it.
